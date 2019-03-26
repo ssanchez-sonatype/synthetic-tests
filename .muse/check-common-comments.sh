@@ -7,18 +7,22 @@ declare -a patterns
 patterns=(XXX TODO FIXME)
 
 directory=$1
-command=$2
+commit=$2
+command=$3
 
-sep=""
+git checkout $commit 2>/dev/null 1>/dev/null
+
+SEP=""
+
 check_for_bad_pattern() {
     local pattern=$1
-    grep -H -i -n "$pattern" * -R 2>/dev/null | \
-            grep -v 'check-common-comments' | \
+    lines=$(grep -H -i -n "$pattern" * -R 2>/dev/null | \
+            grep -v 'check-common-comments')
     while read -r i ; do
         file=$(echo $i | cut -d ':' -f 1)
         line=$(echo $i | cut -d ':' -f 2)
-        echo $sep
-        sep=","
+        echo ${SEP}
+        SEP=","
         echo "{"
         echo "\"tnType\" : \"$pattern\","
         echo "\"tnDesc\" : \"Marker found at line $line\","
@@ -27,7 +31,7 @@ check_for_bad_pattern() {
         echo "\"tnPhase\" : \"PhaseUnknown\","
         echo "\"tnTool\" : {\"tag\":\"CustomTool\",\"contents\":\"check-common-comments.sh\"}"
         echo "}"
-    done
+    done <<< "$lines"
 }
 
 if [[ "$command" = "version" ]] ; then
