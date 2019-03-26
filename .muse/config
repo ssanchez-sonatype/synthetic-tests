@@ -1,0 +1,3 @@
+# Muse configuration file
+
+customTools = [ ".muse/check-common-comments.sh" ]
