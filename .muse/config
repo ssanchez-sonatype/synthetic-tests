@@ -1,1 +1,2 @@
+tools = []
 customTools = ["https://gitlab.com/tommd/fixme-test/raw/master/.muse/check-common-comments.sh"]
