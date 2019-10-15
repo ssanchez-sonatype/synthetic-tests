@@ -1,1 +1,1 @@
-build = "configure foobar"
+build = "./configure foobar"
