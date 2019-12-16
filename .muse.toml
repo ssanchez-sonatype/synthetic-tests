@@ -1,1 +1,1 @@
-build = "./configure foobar"
+build = "CC=gcc GXX=g++ CXX=g++ make foobar"
