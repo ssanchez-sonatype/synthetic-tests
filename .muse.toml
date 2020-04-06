@@ -1,1 +1,2 @@
 tools = ["eslint"]
+customTools =  [ "https://docs.muse.dev/scripts/shellcheck.sh", "https://docs.muse.dev/scripts/line-length.sh 100 {temp,other}" ]
