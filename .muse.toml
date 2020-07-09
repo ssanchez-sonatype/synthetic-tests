@@ -1,3 +1,0 @@
-build = "make"
-tools = []
-customTools = ["https://gitlab.com/snippets/1922318/raw"]
