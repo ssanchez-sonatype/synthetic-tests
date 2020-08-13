@@ -1,2 +1,2 @@
 tools = []
-customTools = ["TESTVAR=null ./shellcheck.sh"]
+customTools = ["./shellcheck.sh"]
