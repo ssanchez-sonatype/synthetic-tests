@@ -1,4 +1,3 @@
 {
-  "source_directories": ["."],
   "taint_models_path": "stubs/taint"
 }
