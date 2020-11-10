@@ -1,1 +1,1 @@
-build = "configure foobar"
+tools = [ "checkov" ]
