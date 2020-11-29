@@ -1,1 +1,2 @@
-build = "configure foobar"
+build = "make"
+tools = [ "cobra" ]
