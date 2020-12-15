@@ -1,1 +1,2 @@
-build = "configure foobar"
+tools = ["pyre"]
+ignore = ["type error"]
