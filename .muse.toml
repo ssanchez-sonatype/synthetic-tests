@@ -1,2 +1,2 @@
 tools = ["pyre"]
-ignore = ["type error"]
+ignore = ["Incompatible variable type"]
