@@ -1,2 +1,3 @@
 tools = []
 customTools = ["./shellcheck.sh"]
+ignoreRules = ["ShellCheck"]
