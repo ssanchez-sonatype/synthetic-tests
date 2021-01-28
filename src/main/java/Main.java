@@ -7,19 +7,12 @@ public class Main {
 
     public static void main(String[] args) throws Exception {
 
-        BufferedReader reader = null;
 
-        try {
+        try (BufferedReader reader = new BufferedReader(new FileReader("/foo/bar/DukesDiary.txt"))) {
 
-            reader = new BufferedReader(new FileReader("/foo/bar/DukesDiary.txt"));
             String taint = reader.readLine();
             MyWriter.writeValue(taint);
 
-        } catch (Exception e) {
-
-            if (reader != null) {
-                reader.close();
-            }
         }
     }
 }
