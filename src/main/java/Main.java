@@ -9,17 +9,17 @@ public class Main {
 
 
         FileReader fileReader = null;
-        BufferReader reader = null;
+        BufferedReader reader = null;
 
         try {
 
             fileReader = new FileReader("/foo/bar/DukesDiary.txt");
-            reader = new BufferedReader(fileReader)
+            reader = new BufferedReader(fileReader);
             String taint = reader.readLine();
             MyWriter.writeValue(taint);
 
-        } catch (Exception e) {
-
+        } finally {
+            
             if (fileReader != null) {
                 fileReader.close();
             }
@@ -28,5 +28,6 @@ public class Main {
                 reader.close();
             }
         }
+
     }
 }
