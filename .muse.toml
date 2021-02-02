@@ -1,3 +1,2 @@
-tools = []
-customTools = ["./shellcheck.sh"]
-ignoreRules = ["ShellCheck"]
+customTools = ["./shellcheck-local.sh"]
+disableTools = ["shellcheck-local"]
