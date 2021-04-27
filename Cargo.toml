@@ -1,0 +1,5 @@
+[package]
+name = "hello_clippy"
+version = "0.1.0"
+authors = ["Tom DuBuisson <tdubuisson@sonatype.com>"]
+edition = "2018"
