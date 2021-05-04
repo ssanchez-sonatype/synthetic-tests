@@ -1,1 +1,1 @@
-build = "./configure foobar"
+tools = [ "/opt/tools/lift.sca.sh" ]
