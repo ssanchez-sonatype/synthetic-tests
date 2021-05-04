@@ -1,1 +1,1 @@
-tools = [ "/opt/tools/lift.sca.sh" ]
+tools = [ "/opt/tools/lift/sca.sh" ]
