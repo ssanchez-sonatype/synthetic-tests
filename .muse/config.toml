@@ -1,2 +1,3 @@
 setup = ".muse/setup.sh"
 tools = ["infer"]
+ignoreRules = ["DEAD_STORE"]

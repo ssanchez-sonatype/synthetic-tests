@@ -5,6 +5,7 @@ cat <<EOF >a.c
 int f()
 {
     void *p = malloc(1);
+    void *k = malloc(1);
     return 42;
 }
 EOF
