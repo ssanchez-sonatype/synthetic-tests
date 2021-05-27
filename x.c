@@ -3,5 +3,12 @@
 int f()
 {
     void *x = malloc(10);
-    return X; 
+    void *y = malloc(10);
+    if(x) {
+        return 1;
+    }
+    if(y) {
+        return 2;
+    }
+    return X;
 }
