@@ -1,1 +1,1 @@
-tools = ["semgrep"]
+tools = ["closure-compiler"]
