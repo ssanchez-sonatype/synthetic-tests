@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+
+set -e
+
 function tellApplicable() {
     printf "true\n" "$res"
 }
@@ -27,14 +30,28 @@ function finalize() {
         echo "Args: $*" >> /tmp/x.sh.finalize.log
         printf "Stdin: " >> /tmp/x.sh.finalize.log
         cat <&0 >> /tmp/x.sh.finalize.log
-        echo '{ "toolNotes" : [
-                { "type" : "type during run",
-                  "message" : "run message",
-                  "file" : "a.c"
-                  "line" : 3,
-                  "noteId" : "noteid"
-                }
-              ]}'
+        echo "" >> /tmp/x.sh.finalize.log
+        local pr_branch="v3-tool-run-and-finish-$(date '+%F_%0H-%0M-%0S_%N')"
+        echo "Checking out ${pr_branch} locally" >> /tmp/x.sh.finalize.log
+        git checkout -b $pr_branch &> /dev/null
+        echo "" >> /tmp/x.sh.finalize.log
+        cat <<EOF
+{ "toolNotes" : [
+    { "type" : "type during run",
+      "message" : "run message",
+      "file" : "a.c",
+      "line" : 3,
+      "noteId" : "noteid"
+    }
+  ]
+, "pullRequest" : {
+      "title": "x.sh PR",
+      "body": "Bug fixes and performance improvements",
+      "target_branch": "v3-tool-run-and-finish-with-finalize",
+      "source_commit": "${pr_branch}"
+  }
+}
+EOF
 }
 
 function tellName() {
