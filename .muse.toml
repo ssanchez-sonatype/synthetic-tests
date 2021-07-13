@@ -1,0 +1,2 @@
+customTools = ["./jdk8-tool.sh"]
+jdk11 = true
