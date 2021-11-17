@@ -1,0 +1,2 @@
+tools = ["pyre"]
+ignoreRules = ["Incompatible variable type"]
