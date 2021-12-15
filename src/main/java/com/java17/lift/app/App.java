@@ -11,7 +11,7 @@ public class App
         System.out.println( "Hello World!" );
     }
     public abstract sealed class Shape {
-    	abstract String f();
+        abstract String f();
         final class Circle extends Shape {
             String f() {
                 int a[] = new int[1];
@@ -19,8 +19,8 @@ public class App
                 if(a.equals(b)) {
                     return a.toString();
                 }
+                return b.toString();
             }
-            return b.toString();
         }
         final class Square extends Shape { String f() { return null; } }
     }
