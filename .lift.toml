@@ -1,0 +1,3 @@
+build = "maven"
+tools = "errorprone"
+jdkVersion = "17"
