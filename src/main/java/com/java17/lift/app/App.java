@@ -12,7 +12,16 @@ public class App
     }
     public abstract sealed class Shape {
     	abstract String f();
-        final class Circle extends Shape { String f() { int a[] = new int[1]; return a.toString(); } }
+        final class Circle extends Shape {
+            String f() {
+                int a[] = new int[1];
+                int b[] = new int[2];
+                if(a.equals(b)) {
+                    return a.toString();
+                }
+            }
+            return b.toString();
+        }
         final class Square extends Shape { String f() { return null; } }
     }
 }
