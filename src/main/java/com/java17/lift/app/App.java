@@ -17,9 +17,9 @@ public class App
                 int a[] = new int[1];
                 int b[] = new int[2];
                 if(a.equals(b)) {
-                    return a.toString();
+                    return "";
                 }
-                return b.toString();
+                return "x";
             }
         }
         final class Square extends Shape { String f() { return null; } }
