@@ -1,2 +1,3 @@
+tools = ["ErrorProne"]
 customTools = [".lift/custom_tool.sh"]
 jdk11 = false
