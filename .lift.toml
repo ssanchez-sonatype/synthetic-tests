@@ -1,1 +1,3 @@
 jdkVersion=17
+build="maven"
+tools=["errorprone"]
