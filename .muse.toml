@@ -1,1 +1,1 @@
-tools = ["closure-compiler"]
+tools = ["/extra-tools/bin/closure-compiler.sh"]
