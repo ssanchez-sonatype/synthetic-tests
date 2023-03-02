@@ -1,4 +1,5 @@
 {
   "source_directories": ["."],
-  "taint_models_path": "stubs/taint"
+  "taint_models_path": "stubs/taint",
+  "typeshed": "/usr/local/lib/pyre_check/typeshed"
 }
